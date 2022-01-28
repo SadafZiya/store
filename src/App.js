@@ -1,11 +1,15 @@
+//style
 import './App.css';
+
+//Components
+import Header from './components/header/Header';
+import Main from './components/main/Main';
 
 function App() {
   return (
     <div className='App'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero
-      voluptatem officia. Porro vero eveniet atque. Sunt doloremque obcaecati
-      voluptatum!
+      <Header />
+      <Main />
     </div>
   );
 }
