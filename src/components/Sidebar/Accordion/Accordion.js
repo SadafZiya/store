@@ -14,10 +14,28 @@ export default function SimpleAccordion() {
           aria-controls='panel1a-content'
           id='panel1a-header'
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>Category</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>some text</Typography>
+          <Typography>jewelry</Typography>
+          <Typography>electronics</Typography>
+          <Typography>men's clothing</Typography>
+          <Typography>women's clothing</Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls='panel1a-content'
+          id='panel1a-header'
+        >
+          <Typography>Customer Review</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            some text
+            <br />
+          </Typography>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -26,21 +44,12 @@ export default function SimpleAccordion() {
           aria-controls='panel2a-content'
           id='panel2a-header'
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Filter by Price</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>some text</Typography>
         </AccordionDetails>
       </Accordion>
-      {/* <Accordion disabled>
-        <AccordionSummary
-          //   expandIcon={<ExpandMoreIcon />}
-          aria-controls='panel3a-content'
-          id='panel3a-header'
-        >
-          <Typography>Disabled Accordion</Typography>
-        </AccordionSummary>
-      </Accordion> */}
     </div>
   );
 }

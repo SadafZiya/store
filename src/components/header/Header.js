@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 //styles
 import './Header.css';
@@ -7,8 +7,16 @@ import shopIcon from '../../assets/shop-icon.png';
 import cartIcon from '../../assets/online-cart.svg';
 import searchIcon from '../../assets/search.svg';
 
-const Header = () => {
-  const SubmitHandler = () => {};
+const Header = ({ setSearchFilter }) => {
+  const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    setSearchFilter(inputValue);
+  }, [inputValue, setSearchFilter]);
+
+  const SubmitHandler = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
@@ -20,7 +28,7 @@ const Header = () => {
           <img src={shopIcon} alt='shop icon' />
         </div>
         <form className='search' onSubmit={SubmitHandler}>
-          <input type='text' />
+          <input type='text' onChange={(e) => setInputValue(e.target.value)} />
           <button type='submit'>
             <img src={searchIcon} alt='search' />
           </button>

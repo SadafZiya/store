@@ -10,8 +10,6 @@ const Sidebar = () => {
   return (
     <div className='sidebar'>
       <SimpleAccordion />
-      <SimpleAccordion />
-      <SimpleAccordion />
     </div>
   );
 };
