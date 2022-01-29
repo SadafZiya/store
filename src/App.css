@@ -2,12 +2,18 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  --primery: #febd69;
-  --secendery: #131921;
-  --secendery2: #232f3e;
+  font-family: 'Montserrat', sans-serif;
+  --primary: #febd69;
+  --secondary: #131921;
+  --secondary2: #232f3e;
   --link: #288798;
 }
 
 .App {
   background-color: #fff;
+}
+.App main {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
 }

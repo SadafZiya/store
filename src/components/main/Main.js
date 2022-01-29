@@ -1,14 +1,18 @@
 import React from 'react';
 
+//Components
+import Card from './Card/Card';
+
 //Styles
 import './Main.css';
-import SimpleAccordion from '../Accordion/Accordion';
 
-const Main = () => {
+const Main = ({ data }) => {
   return (
-    <>
-      <SimpleAccordion />
-    </>
+    <div className='product-container'>
+      {data?.map(({ id, image, title, price }) => (
+        <Card key={id} image={image} title={title} price={price} />
+      ))}
+    </div>
   );
 };
 
