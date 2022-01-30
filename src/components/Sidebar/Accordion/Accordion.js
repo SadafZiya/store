@@ -4,8 +4,16 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import StarRating from '../../StarRating/StarRating';
+import CategoryFilter from '../Categoryfilter/CategoryFilter';
 
 export default function SimpleAccordion() {
+  const ProductCategory = [
+    'electronics',
+    'jewelery',
+    "men's clothing",
+    "women's clothing",
+  ];
   return (
     <div>
       <Accordion>
@@ -17,10 +25,7 @@ export default function SimpleAccordion() {
           <Typography>Category</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>jewelry</Typography>
-          <Typography>electronics</Typography>
-          <Typography>men's clothing</Typography>
-          <Typography>women's clothing</Typography>
+          <CategoryFilter items={ProductCategory} />
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -33,8 +38,12 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            some text
-            <br />
+            <StarRating rate={4} />
+            <StarRating rate={3} />
+
+            <StarRating rate={2} />
+
+            <StarRating rate={1} />
           </Typography>
         </AccordionDetails>
       </Accordion>
