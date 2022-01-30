@@ -2,7 +2,6 @@ import * as React from 'react';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { orange } from '@mui/material/colors';
 
 const CategoryFilter = ({ items }) => {
   return (
@@ -18,12 +17,13 @@ const CategoryFilter = ({ items }) => {
     >
       {items.map((item) => (
         <FormControlLabel
+          key={item}
           control={
             <Checkbox
               sx={{
-                color: orange[300],
+                color: 'var(--link)',
                 '&.Mui-checked': {
-                  color: orange[400],
+                  color: 'var(--link)',
                 },
               }}
             />
