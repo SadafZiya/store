@@ -6,13 +6,16 @@ import FormControl from '@mui/material/FormControl';
 import { FilterContext } from '../../context/filter_context';
 
 export default function PriceFilter({ items }) {
-  const { setFilterPrice } = React.useContext(FilterContext);
+  const { setFilterPrice, setMaxPrice, setMinPrice } =
+    React.useContext(FilterContext);
 
   const handleChange = (e) => {
     setFilterPrice({
       price: e.target.id,
       checked: e.target.checked,
     });
+    setMaxPrice('');
+    setMinPrice('');
   };
 
   return (

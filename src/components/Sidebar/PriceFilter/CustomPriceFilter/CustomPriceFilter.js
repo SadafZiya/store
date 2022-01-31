@@ -5,7 +5,7 @@ import { FilterContext } from '../../../context/filter_context';
 import './CustomPriceFilter.css';
 
 const CustomPriceFilter = () => {
-  const { setFilterPrice, setMaxPrice, setMinPrice } =
+  const { setFilterPrice, setMaxPrice, setMinPrice, minPrice, maxPrice } =
     React.useContext(FilterContext);
 
   const submitHandler = (e) => {
@@ -23,6 +23,7 @@ const CustomPriceFilter = () => {
           name='min'
           id='min'
           min={0}
+          value={minPrice}
           max={99999}
           placeholder='$ Min'
           onChange={(e) => setMinPrice(e.target.value)}
@@ -33,6 +34,7 @@ const CustomPriceFilter = () => {
           name='max'
           id='max'
           min={0}
+          value={maxPrice}
           max={99999}
           placeholder='$ Max'
           onChange={(e) => setMaxPrice(e.target.value)}

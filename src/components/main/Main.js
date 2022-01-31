@@ -42,7 +42,7 @@ const Main = ({ data, searchFilter }) => {
         })
 
         .filter((product) => {
-          if (price === '' || minPrice === '' || maxPrice === '') {
+          if (price === '') {
             return product;
           } else if (price === 'Any Price') {
             return product;
@@ -58,6 +58,8 @@ const Main = ({ data, searchFilter }) => {
             return 200.0 <= product.price;
           } else if (price === 'custom-price') {
             return minPrice <= product.price && product.price <= maxPrice;
+          } else if (minPrice === '' && maxPrice === '') {
+            return product;
           }
         })
         .filter((product) => {
