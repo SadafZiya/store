@@ -4,13 +4,13 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import StarRating from '../../StarRating/StarRating';
-import CategoryFilter from '../Categoryfilter/CategoryFilter';
+import StarRating from '../StarRating/StarRating';
+import CategoryFilter from '../CategoryFilter/CategoryFilter';
 import PriceFilter from '../PriceFilter/PriceFilter';
-import { typography } from '@mui/system';
 
 export default function SimpleAccordion() {
   const ProductCategory = [
+    'All',
     'electronics',
     'jewelery',
     "men's clothing",

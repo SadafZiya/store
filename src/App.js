@@ -15,7 +15,6 @@ function App() {
     'https://fakestoreapi.com/products'
   );
   const [searchFilter, setSearchFilter] = useState();
-  console.log(searchFilter);
 
   return (
     <div className='App'>
