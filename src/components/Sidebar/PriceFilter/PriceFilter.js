@@ -3,12 +3,16 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import { FilterContext } from '../../context/filter_context';
 
 export default function PriceFilter({ items }) {
-  const [value, setValue] = React.useState('female');
+  const { setFilterPrice } = React.useContext(FilterContext);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
+  const handleChange = (e) => {
+    setFilterPrice({
+      price: e.target.id,
+      checked: e.target.checked,
+    });
   };
 
   return (
@@ -22,8 +26,6 @@ export default function PriceFilter({ items }) {
       <RadioGroup
         aria-labelledby='demo-controlled-radio-buttons-group'
         name='controlled-radio-buttons-group'
-        value={value}
-        onChange={handleChange}
       >
         {items.map((item) => (
           <FormControlLabel
@@ -31,6 +33,8 @@ export default function PriceFilter({ items }) {
             value={item}
             control={
               <Radio
+                id={item}
+                onClick={(e) => handleChange(e)}
                 sx={{
                   color: 'var(--link)',
                   '&.Mui-checked': {

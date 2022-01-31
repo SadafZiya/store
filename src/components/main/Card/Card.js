@@ -3,7 +3,7 @@ import React from 'react';
 //Styles
 import './Card.css';
 
-const Card = ({ id, image, title, price }) => {
+const Card = ({ id, image, title, price, rating }) => {
   return (
     <div className='card'>
       <div className='product-image'>
@@ -12,7 +12,7 @@ const Card = ({ id, image, title, price }) => {
       <div className='product-info'>
         <p className='product-name'> {title}</p>
         <div className='product-information'>
-          <span className='product-rate'>⭐4.5</span>
+          <span className='product-rate'>⭐{rating.rate}</span>
           <span className='product-price'>$ {price}</span>
         </div>
       </div>

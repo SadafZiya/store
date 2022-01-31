@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: baseline;
   cursor: pointer;
+
   width: fit-content;
   border: 1px solid #fff;
 }

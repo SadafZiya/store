@@ -7,8 +7,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StarRating from '../StarRating/StarRating';
 import CategoryFilter from '../CategoryFilter/CategoryFilter';
 import PriceFilter from '../PriceFilter/PriceFilter';
+import { FilterContext } from '../../context/filter_context';
+import CustomPriceFilter from '../PriceFilter/CustomPriceFilter/CustomPriceFilter';
 
 export default function SimpleAccordion() {
+  const { setFilterStar } = React.useContext(FilterContext);
+
+  const clickHandler = (e) => {
+    setFilterStar({ Star: e.target.id });
+  };
   const ProductCategory = [
     'All',
     'electronics',
@@ -47,6 +54,22 @@ export default function SimpleAccordion() {
           <Typography>Customer Review</Typography>
         </AccordionSummary>
         <AccordionDetails>
+          <div
+            style={{
+              margin: '0px 0px 15px 0px ',
+              textDecoration: 'underLine',
+              cursor: 'pointer',
+            }}
+          >
+            <span
+              id='clear'
+              onClick={(e) => {
+                clickHandler(e);
+              }}
+            >
+              clear
+            </span>
+          </div>
           <StarRating rate={4} />
           <StarRating rate={3} />
           <StarRating rate={2} />
@@ -63,6 +86,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <PriceFilter items={ProductPriceFilter} />
+          <CustomPriceFilter />
         </AccordionDetails>
       </Accordion>
     </div>

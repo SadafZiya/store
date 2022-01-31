@@ -9,7 +9,7 @@ export default function StarRating({ rate }) {
   const { setFilterStar } = React.useContext(FilterContext);
 
   const clickHandler = (e) => {
-    console.log(e.target.id);
+    setFilterStar({ Star: e.target.id });
   };
   return (
     <Stack spacing={1}>
@@ -31,7 +31,7 @@ export default function StarRating({ rate }) {
           //   setValue(newValue);
           // }}
         />
-        <span> & Up</span>
+        <span style={{ cursor: 'arrow' }}> & Up</span>
       </div>
     </Stack>
   );

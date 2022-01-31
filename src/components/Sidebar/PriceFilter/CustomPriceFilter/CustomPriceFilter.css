@@ -1,0 +1,33 @@
+.custom-price-filter {
+}
+.custom-price-filter form {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+.custom-price-filter input {
+  width: 55px;
+  height: 30px;
+  padding: 5px;
+  margin-right: 5px;
+}
+.custom-price-filter input::-webkit-outer-spin-button,
+.custom-price-filter input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.custom-price-filter input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.custom-price-filter button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: var(--primary);
+  border-radius: 8px;
+  cursor: pointer;
+}
