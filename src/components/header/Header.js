@@ -48,7 +48,16 @@ const Header = ({ setSearchFilter }) => {
         </div>
       </nav>
       <div className='main-image'>
-        <img src={shopHeader} alt='' />
+        <img src={shopHeader} alt='shop' />
+        <div className='welcome-massage'>
+          <h2>
+            Welcome to the ROSE <span>SHOP</span>, Incorporated!
+          </h2>
+          <p>
+            We appreciate you joining our club. You now have exclusive access to
+            new arrivals and sales. Ready to build a show-stopping wardrobe?
+          </p>
+        </div>
       </div>
     </>
   );

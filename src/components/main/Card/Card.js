@@ -11,8 +11,10 @@ const Card = ({ id, image, title, price }) => {
       </div>
       <div className='product-info'>
         <p className='product-name'> {title}</p>
-        <span className='product-rate'>4.5 ⭐</span>
-        <span className='product-price'>${price}</span>
+        <div className='product-information'>
+          <span className='product-rate'>⭐4.5</span>
+          <span className='product-price'>$ {price}</span>
+        </div>
       </div>
     </div>
   );

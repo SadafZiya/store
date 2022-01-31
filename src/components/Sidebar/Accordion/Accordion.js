@@ -49,9 +49,7 @@ export default function SimpleAccordion() {
         <AccordionDetails>
           <StarRating rate={4} />
           <StarRating rate={3} />
-
           <StarRating rate={2} />
-
           <StarRating rate={1} />
         </AccordionDetails>
       </Accordion>

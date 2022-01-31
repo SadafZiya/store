@@ -5,4 +5,5 @@
   flex-wrap: wrap;
   width: 80%;
   padding-top: 3rem;
+  justify-content: center;
 }
