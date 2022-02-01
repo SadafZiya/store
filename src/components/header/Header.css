@@ -34,14 +34,19 @@ nav {
 }
 .search input {
   width: 60%;
+  height: 45px;
   padding: 10px;
+
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   border-color: var(--primary);
+}
+.search input:focus {
   outline-color: var(--primary);
 }
 .search button {
   padding: 5px 7px;
+  height: 45px;
   cursor: pointer;
   background-color: var(--primary);
   border-color: var(--primary);

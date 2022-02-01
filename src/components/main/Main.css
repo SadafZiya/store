@@ -7,3 +7,17 @@
   padding-top: 3rem;
   justify-content: center;
 }
+
+.filter-error {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.filter-error h4 {
+  font-size: 1.6rem;
+}
+.filter-error p {
+  color: rgba(0, 0, 0, 0.596);
+}

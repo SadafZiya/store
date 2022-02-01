@@ -10,6 +10,7 @@ export function FilterProvider({ children }) {
 
   const [filterStar, setFilterStar] = useState({
     Star: '',
+    checkedStar: false,
   });
 
   const [filterPrice, setFilterPrice] = useState({
@@ -17,6 +18,8 @@ export function FilterProvider({ children }) {
   });
   const [maxPrice, setMaxPrice] = useState(0);
   const [minPrice, setMinPrice] = useState(0);
+
+  const [sortBy, setSortBy] = useState('');
 
   return (
     <FilterContext.Provider
@@ -31,6 +34,8 @@ export function FilterProvider({ children }) {
         setMinPrice,
         maxPrice,
         setMaxPrice,
+        sortBy,
+        setSortBy,
       }}
     >
       {children}

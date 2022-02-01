@@ -14,3 +14,6 @@
 .start-rating:hover {
   border-bottom: 1px solid var(--primary);
 }
+.select-bold {
+  font-weight: 800;
+}
