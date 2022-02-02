@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import StarRating from '../StarRating/StarRating';
-import CategoryFilter from '../CategoryFilter/CategoryFilter';
+import CategoryFilter from '../Categoryfilter/CategoryFilter';
 import PriceFilter from '../PriceFilter/PriceFilter';
 import { FilterContext } from '../../context/filter_context';
 import CustomPriceFilter from '../PriceFilter/CustomPriceFilter/CustomPriceFilter';
